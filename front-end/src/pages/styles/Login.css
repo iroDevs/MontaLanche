@@ -1,0 +1,46 @@
+.caixa-login 
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px !important;
+   
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.caixa-login-form 
+{
+   
+    display: flex;
+    flex-direction: column;
+
+}
+
+.caixa-login-form input
+{
+   width: auto !important;
+   border-radius: 20px !important;
+   margin-top: 20px;
+
+}
+
+.caixa-login h1 
+{
+    margin-bottom: 30px;
+}
+
+.caixa-login button {
+    width: 200px;
+    border-radius: 30% !important;
+    justify-self: center;
+    align-self: center;
+    margin-top: 30px;
+}
+
+.caixa-login a {
+    align-self: flex-start;
+    margin-top: 20px;
+}
