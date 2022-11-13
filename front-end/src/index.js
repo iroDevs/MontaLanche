@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './pages/LoginPage'
+import Home from './pages/Home' 
 
 import './index.css'
 
@@ -9,8 +10,12 @@ import reportWebVitals from './reportWebVitals'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/login',
     element: <Login />
+  },
+  {
+    path: '/',
+    element: <Home />
   }
 ])
 
