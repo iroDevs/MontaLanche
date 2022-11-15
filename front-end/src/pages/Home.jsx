@@ -36,6 +36,7 @@ function pages () {
   return (
     <>
     <MenuLateral />
+
     <HomePage image={'image'} name={'Nome da lanchonete'} open={false} />
     <ListLanche lanches={fakeInfo} />
     </>
