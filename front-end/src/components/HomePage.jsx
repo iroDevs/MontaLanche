@@ -13,7 +13,9 @@ export default function HomePage ({ image = 'https://img.elo7.com.br/product/ori
     <div className='home-page' style={style} >
 
 <Typography variant="h1" gutterBottom>
+      <div className='caixa'>
        Lanches
+      </div>
       </Typography>
     </div>
   )
