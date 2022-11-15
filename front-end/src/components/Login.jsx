@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-useless-escape */
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { Navigate } from 'react-router-dom'
 
 function Login () {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [navigate, setNavigate] = useState(false)
 
   function validateEmail (email) {
     const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
@@ -15,6 +17,9 @@ function Login () {
       return false
     }
   };
+  useEffect(() => {
+    setNavigate(false)
+  })
 
   function handleChangeEmail ({ target: { value } }) {
     setEmail(value)
@@ -27,6 +32,7 @@ function Login () {
   function clickButton () {
     if (validateEmail(email)) {
       console.log(true)
+      setNavigate(true)
     } else {
       console.log(false)
     }
@@ -40,6 +46,12 @@ function Login () {
     <button onClick={clickButton} type="button" className="btn btn-outline-primary btn-login">Entrar</button>
     <a href="#!" > Cadastra-se</a>
     <a href="#!" > Esqueci a senha</a>
+    {
+      navigate
+        ? <Navigate to='/home' />
+        : undefined
+    }
+
   </div>
 </>
 
