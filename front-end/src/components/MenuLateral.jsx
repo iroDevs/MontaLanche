@@ -10,8 +10,12 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import InboxIcon from '@mui/icons-material/MoveToInbox'
+import MessageIcon from '@mui/icons-material/Message'
+import FmdGoodIcon from '@mui/icons-material/FmdGood'
+import StarIcon from '@mui/icons-material/Star'
 import MailIcon from '@mui/icons-material/Mail'
 import MenuIcon from '@mui/icons-material/Menu'
+import PersonIcon from '@mui/icons-material/Person'
 
 export default function TemporaryDrawer () {
   const [state, setState] = React.useState({
@@ -38,7 +42,10 @@ export default function TemporaryDrawer () {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {text === 'Meus Favoritos' ? <StarIcon /> : undefined}
+                {text === 'Comentario' ? <MessageIcon /> : undefined}
+                {text === 'Localização' ? <FmdGoodIcon /> : undefined}
+                {text === 'Sobre' ? <PersonIcon /> : undefined}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -51,7 +58,7 @@ export default function TemporaryDrawer () {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
