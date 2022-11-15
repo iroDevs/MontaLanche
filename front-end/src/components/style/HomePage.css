@@ -1,11 +1,14 @@
-.teste {
+.home-page {
     z-index: 0;
-    background-image: url('https://img.elo7.com.br/product/original/3159FC2/papel-de-parede-adesivo-restaurante-lanchonete-cozinha-comprar-papel-de-parede.jpg');
+    background-image: linear-gradient(rgba(161, 161, 161, 0.281), rgba(114, 114, 114, 0.315)),url('https://img.elo7.com.br/product/original/3159FC2/papel-de-parede-adesivo-restaurante-lanchonete-cozinha-comprar-papel-de-parede.jpg');
     background-size: cover;
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: red;
+   text-align: center;
+   padding-top: 10%;
+   font-weight: 900;
+
 }
 
 .menu {
