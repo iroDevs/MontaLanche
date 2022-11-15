@@ -2,6 +2,7 @@
 import React from 'react'
 import MenuLateral from '../components/MenuLateral'
 import HomePage from '../components/HomePage'
+import ListLanche from '../components/ListLanche'
 
 import './styles/Home.css'
 const fakeInfo =
@@ -36,6 +37,7 @@ function pages () {
     <>
     <MenuLateral />
     <HomePage image={'image'} name={'Nome da lanchonete'} open={false} />
+    <ListLanche lanches={fakeInfo} />
     </>
   )
 }
