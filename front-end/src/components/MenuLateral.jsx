@@ -69,7 +69,7 @@ export default function TemporaryDrawer () {
   )
 
   return (
-    <div>
+    <div className='menu'>
       {['Menu'].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}><MenuIcon /></Button>
